@@ -1,4 +1,3 @@
-from typing import Union
 import sql_functions as func 
 from fastapi import FastAPI
 
