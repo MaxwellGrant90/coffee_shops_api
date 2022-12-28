@@ -31,3 +31,24 @@ def all_shops():
                      'area_code': results[10]}
         table.append(record)
     return table
+
+def first_twenty_shops():
+    stmt = text('''
+    SELECT id, "name", "type", rating, review,
+            price, delivery, dinein, takeout,
+            country, area_code
+    FROM coffee.shops
+    ORDER BY rating DESC
+    LIMIT 20
+    ''')
+    results = conn.execute(stmt).fetchall()
+    table = []
+    for result in results:
+        record = {'id': results[0], 'name': results[1], 
+                    'type': results[2], 'rating': results[3], 
+                    'review': results[4], 'price': results[5], 
+                    'delivery': results[6], 'dinein': results[7],
+                     'takeout': results[8], 'country': results[9], 
+                     'area_code': results[10]}
+        table.append(record)
+    return table

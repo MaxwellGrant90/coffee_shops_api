@@ -10,3 +10,7 @@ def read_root():
 @app.get("/all")
 def get_all_shops():
     return func.all_shops()
+
+@app.get("/twenty")
+def get_first_twenty_shops():
+    return func.first_twenty_shops()
