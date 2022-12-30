@@ -4,8 +4,8 @@ from sqlalchemy import insert
 
 
 username = 'dev'
-password = 'passworddev'
-hostname = '34.67.84.68'
+password = ''
+hostname = ''
 port= '5432'
 dbName = 'coffee'
 uri= f'postgresql+psycopg2://{username}:{password}@{hostname}:{port}/{dbName}'
