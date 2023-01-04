@@ -24,11 +24,11 @@ def all_shops():
     table = []
     for result in results:
         record = {'id': results[0], 'name': results[1], 
-                    'type': results[2], 'rating': results[3], 
-                    'review': results[4], 'price': results[5], 
-                    'delivery': results[6], 'dinein': results[7],
-                     'takeout': results[8], 'country': results[9], 
-                     'area_code': results[10]}
+                    'type': result[2], 'rating': result[3], 
+                    'review': result[4], 'price': result[5], 
+                    'delivery': result[6], 'dinein': result[7],
+                     'takeout': result[8], 'country': result[9], 
+                     'area_code': result[10]}
         table.append(record)
     return table
 
@@ -44,11 +44,11 @@ def first_twenty_shops():
     results = conn.execute(stmt).fetchall()
     table = []
     for result in results:
-        record = {'id': results[0], 'name': results[1], 
-                    'type': results[2], 'rating': results[3], 
-                    'review': results[4], 'price': results[5], 
-                    'delivery': results[6], 'dinein': results[7],
-                     'takeout': results[8], 'country': results[9], 
-                     'area_code': results[10]}
+        record = {'id': result[0], 'name': result[1], 
+                    'type': result[2], 'rating': result[3], 
+                    'review': result[4], 'price': result[5], 
+                    'delivery': result[6], 'dinein': result[7],
+                     'takeout': result[8], 'country': result[9], 
+                     'area_code': result[10]}
         table.append(record)
     return table
