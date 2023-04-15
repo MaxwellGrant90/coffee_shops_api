@@ -23,7 +23,7 @@ def all_shops():
     results = conn.execute(stmt).fetchall()
     table = []
     for result in results:
-        record = {'id': results[0], 'name': results[1], 
+        record = {'id': result[0], 'name': result[1], 
                     'type': result[2], 'rating': result[3], 
                     'review': result[4], 'price': result[5], 
                     'delivery': result[6], 'dinein': result[7],
